@@ -14,7 +14,11 @@
     "dialect": "mysql"
   },
   "production": {
-    "use_env_variable":"mysql://hb4597uwt7hab9ph:j4r8id4xopkrxxxi@g9fej9rujq0yt0cd.cbetxkdyhwsb.us-east-1.rds.amazonaws.com:3306/fq7cw15evyjncj3q",
+    "username": "hb4597uwt7hab9ph",
+    "password": "j4r8id4xopkrxxxi",
+    "database": "fq7cw15evyjncj3q",
+    "host": "g9fej9rujq0yt0cd.cbetxkdyhwsb.us-east-1.rds.amazonaws.com",
+    "port": 3306,
     "dialect": "mysql"
   }
 }
