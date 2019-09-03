@@ -11,11 +11,21 @@ module.exports = function(sequelize, DataTypes) {
       type: DataTypes.TEXT,
       allowNull: false,
       len: [1]
-    },
-    category: {
-      type: DataTypes.STRING,
-      defaultValue: "Personal"
     }
-  });
+  },
+    {
+      // We're saying that we want our Author to have Posts
+      classMethods: {
+        associate: function(models) {
+          // An Author (foreignKey) is required or a Post can't be made
+          Post.belongsTo(models.Author, {
+            foreignKey: {
+              allowNull: false
+            }
+          });
+        }
+      }
+    }
+  );
   return Post;
 };
